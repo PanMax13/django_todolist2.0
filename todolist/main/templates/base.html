@@ -1,0 +1,60 @@
+{% load static %}
+{% load tables %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="header">
+        <div class="user">Username</div>
+    </div>
+    <div class="main_block">
+        <div class="tables">
+            <div class="tables_list">
+                <a href="{% url 'category' 'all' %}" class="table_name_link"><div class="table_name">Все задачи</div></a>
+                {% tables_categories as tables %}
+                {% for table in tables %}
+                <a href="{% url 'category' table.slug %}" class="table_name_link"><div class="table_name">{{ table.category }}</div></a>
+                <!--<a href="#" class="table_name_link"><div class="table_name">Table</div></a>
+                <a href="#" class="table_name_link"><div class="table_name">Table</div></a>
+                <a href="#" class="table_name_link"><div class="table_name">Table</div></a>
+                <a href="#" class="table_name_link"><div class="table_name">Table</div></a>
+                <a href="#" class="table_name_link"><div class="table_name">Table</div></a>-->
+                {% endfor %}
+            </div>
+        </div>
+        <div class="table">
+            <div class="selected_table">
+                <div class="selected_table_name">Table name</div>
+                <div class="selected_table_tasks">
+                    {% block tasks %} {% endblock %}
+                    <!--<div class="selected_table_task">
+                        <div class="task number">1</div>
+                        <div class="task title">feed the dog</div>
+                        <div class="task discription">put food for dog's plate</div>
+                        <div class="task data">14:25</div>
+                    </div>
+                    <div class="selected_table_task">
+                        <div class="task number">2</div>
+                        <div class="task title">feed the cat</div>
+                        <div class="task discription">put food for cat's plate</div>
+                        <div class="task data">14:45</div>
+                    </div>
+                    <div class="selected_table_task">
+                        <div class="task number">3</div>
+                        <div class="task title">feed the fish</div>
+                        <div class="task discription">put food to aquarium</div>
+                        <div class="task data">15:14</div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

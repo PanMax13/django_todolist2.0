@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 245, 245);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(253, 186, 61);
+}
+
+.user {
+    width: 200px;
+    position: absolute;
+    margin: 10px 90% ;
+}
+
+
+.main_block {
+    display: flex;
+}
+
+.tables {
+    flex: 2;
+}
+
+.tables_list {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 1px 14px 51px -12px rgba(0,0,0,0.53);
+    -webkit-box-shadow: 1px 14px 51px -12px rgba(0,0,0,0.53);
+    -moz-box-shadow: 1px 14px 51px -12px rgba(0,0,0,0.53);
+}
+
+.table_name_link {
+    width: 80%;
+    align-items: center;
+}
+
+.table_name {
+    flex: 2;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+
+
+.table {
+    flex: 5;
+}
+
+.selected_table {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.selected_table_name {
+    font-size: 25px;
+}
+
+.selected_table_tasks {
+    margin: 20px auto;
+    border-top: 1px solid rgba(70, 70, 70, 0.198);
+}
+
+.selected_table_task {
+    padding: 10px;
+    background-color: rgb(253, 209, 127);
+    display: flex;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.task {
+    text-align: center;
+}
+
+.task:nth-child(1) {
+    flex: 0.5;
+}
+
+.task:nth-child(2) {
+    flex: 1;
+}
+
+.task:nth-child(3) {
+    flex: 2;
+}
+
+.task:nth-child(4) {
+    flex: 0.01;
+}
