@@ -16,7 +16,7 @@
     <div class="main_block">
         <div class="tables">
             <div class="tables_list">
-                <a href="{% url 'category' 'all' %}" class="table_name_link"><div class="table_name">All</div></a>
+                <a href="{% url 'category' 'all' %}" class="table_name_link"><div class="table_name">Все задачи</div></a>
                 {% tables_categories as tables %}
                 {% for table in tables %}
                 <a href="{% url 'category' table.slug %}" class="table_name_link"><div class="table_name">{{ table.category }}</div></a>
@@ -30,10 +30,10 @@
         </div>
         <div class="table">
             <div class="selected_table">
-                {% block tasks %} {% endblock %}
-                <!--<div class="selected_table_name"></div>
+                <div class="selected_table_name">Table name</div>
                 <div class="selected_table_tasks">
-                    <div class="selected_table_task">
+                    {% block tasks %} {% endblock %}
+                    <!--<div class="selected_table_task">
                         <div class="task number">1</div>
                         <div class="task title">feed the dog</div>
                         <div class="task discription">put food for dog's plate</div>
