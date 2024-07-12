@@ -3,7 +3,7 @@ from . import views
 
 
 patterns = [
-    path('categories/<slug:slug>/', views.filter_url, name='category'),
+    path('<slug:slug>/', views.filter_url, name='category'),
 ]
 
 

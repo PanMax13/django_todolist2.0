@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CZ:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="label_block">
+        <div class="label_text">All your tasks are here now</div>
+    </div>
+    <div class="register_block">
+        <div class="rows left_row"></div>
+        <div class="rows main_row">
+            <div class="register_form">
+                <div class="register_block_form_title">Registarion</div>
+                <div class="register_block_form_fields">
+                    <input placeholder="UserName or Email">
+                    <input placeholder="Password" type="password">
+                </div>
+                <button class="registration_button">Let's go</button>
+                <div class="register_block_form_if_account_exist">Haven't got an aaccount? <a href="#">log in</a></div>
+            </div>
+        </div>
+        <div class="rows right_row"></div>
+    </div>
+</body>
+</html>
