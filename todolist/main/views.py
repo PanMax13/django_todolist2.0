@@ -10,11 +10,15 @@ def all(request):
 def filter_url(request, slug='all'):
     try:
         table = Tables.objects.get(slug=slug)
+        category = table.category
         tasks = Tasks.objects.filter(category=table.id)
     except:
         tasks = Tasks.objects.all()
+        category = 'All'
+
 
     context = {
+        'table_name': category,
         'tasks': tasks
     }
 
