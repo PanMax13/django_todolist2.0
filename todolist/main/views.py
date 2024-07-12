@@ -10,12 +10,15 @@ def all(request):
 def filter_url(request, slug='all'):
     try:
         table = Tables.objects.get(slug=slug)
+        category = table.category
         tasks = Tasks.objects.filter(category=table.id)
     except:
         tasks = Tasks.objects.all()
+        category = 'All'
 
     context = {
-        'tasks': tasks
+        'tasks': tasks,
+        'table_name': category
     }
 
     return render(request, 'show_tasks.html', context)
