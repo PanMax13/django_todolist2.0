@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 
 {% block tasks %}
+<div class="selected_table_name">{{table_name}}</div>
+<div class="selected_table_tasks">
 {% for task in tasks %}
 <div class="selected_table_task">
     <div class="task number">{{ forloop.counter }}</div>
     <div class="task title">{{ task.title }}</div>
-    <div class="task discription">{{ task.discription }}</div>
+    <div class="task discription">{{ task.discription|truncatechars_html:45 }}</div>
     <div class="task data">{{ task.date }}</div>
 </div>
 {% endfor %}
+</div>
 {% endblock %}
