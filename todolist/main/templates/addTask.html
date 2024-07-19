@@ -1,0 +1,17 @@
+<div>
+<form action="{% url 'saveTask' %}" method="post">
+    {% csrf_token %}
+    <div>title: <input placeholder="Title" name="title"></div>
+    <div>Discription: <input placeholder="Description" name="description"></div>
+    <div>Date of create: <input placeholder="Date of create" name="date"></div>
+    <div>
+        Category:
+        <select name="category">
+            {% for category in categories %}
+                <option value="{{category.category}}">{{category.category}}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <button type="submit">Done</button>
+</form>
+</div>

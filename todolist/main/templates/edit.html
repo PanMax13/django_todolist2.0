@@ -1,0 +1,7 @@
+<form method="post" action="{% url 'save' %}">
+    {% csrf_token %}
+    <div>id: {{task_data.id}}</div>
+    <div>title: <input value="{{task_data.title}}" name="title"></div>
+    <div>discription: <textarea name="discription">{{task_data.discription}}</textarea></div>
+    <button type="submit">done!</button>
+</form>

@@ -22,7 +22,7 @@ class Tables(models.Model):
 class Tasks(models.Model):
     title = models.CharField(max_length=200, null=False, verbose_name="Заголовок")
     discription = models.CharField(max_length=1000, null=False, verbose_name="Описание")
-    date = models.DateField(auto_created=True, verbose_name="Дата создания")
+    date = models.DateTimeField(verbose_name="Дата создания", auto_now_add=True)
     category = models.ForeignKey(to=Tables, on_delete=models.CASCADE, verbose_name='Категория')
 
     class Meta:

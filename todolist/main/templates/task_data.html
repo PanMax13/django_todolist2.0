@@ -1,0 +1,13 @@
+<div class="task_data">
+    <b>Title: </b> {{ task_data.title }}<br>
+    <b>Discription: </b> {{ task_data.discription }}<br>
+    <b>Date of create: </b> {{ task_data.date }}<br>
+</div>
+
+
+<a href="{% url 'removeTask' task_data.id %}">
+    <div>remove</div>
+</a>
+<a href="{% url 'editTask' task_data.id %}">
+    <div>edit</div>
+</a>

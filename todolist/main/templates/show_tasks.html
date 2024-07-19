@@ -3,13 +3,18 @@
 {% block tasks %}
 <div class="selected_table_name">{{table_name}}</div>
 <div class="selected_table_tasks">
+    {% if not tasks %}
+    <div>No tasks are here</div>
+    {%endif%}
 {% for task in tasks %}
-<div class="selected_table_task">
-    <div class="task number">{{ forloop.counter }}</div>
-    <div class="task title">{{ task.title }}</div>
-    <div class="task discription">{{ task.discription|truncatechars_html:45 }}</div>
-    <div class="task data">{{ task.date }}</div>
-</div>
+<a href="{% url 'taskMenu' task.id %}">
+    <div class="selected_table_task">
+        <div class="task number">{{ forloop.counter }}</div>
+        <div class="task title">{{ task.title }}</div>
+        <div class="task discription">{{ task.discription|truncatechars_html:45 }}</div>
+        <div class="task data">{{ task.date }}</div>
+    </div>
+</a>
 {% endfor %}
 </div>
 {% endblock %}
